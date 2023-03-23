@@ -1,11 +1,11 @@
 # PLAYTECH
-## Instalation
+# Instalation
 
 For using program with graphical interface _flask_ should be installed in Python.
 ```
 pip install Flask
 ```
-## Using the application
+# Using the application
 
 There is 2 programs. One of them (_exchanger_app.py_) has GUI interface, another (_exchager_ide.py_) does not have GUI.
 
