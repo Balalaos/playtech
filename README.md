@@ -7,7 +7,7 @@ pip install Flask
 ```
 ## Using the application
 
-There is 2 programs. One of them (_exchanger_app.py_) has GUI interface, another (_exchager_ide.py_) does not have GUI and is in folder "exchager_ide". The one with 
+There is 2 programs. One of them (_exchanger_app.py_) has GUI interface, another (_exchager_ide.py_) does not have GUI.
 
 ## App
 
