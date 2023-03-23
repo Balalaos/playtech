@@ -1,7 +1,7 @@
 # PLAYTECH
 ## Instalation
 
-For using program with graphical interface _flask_ hould be installed in Python.
+For using program with graphical interface _flask_ should be installed in Python.
 ```
 pip install Flask
 ```
