@@ -20,6 +20,6 @@ File _exchager_ide.py_ does not have graphical interface. When programs starts, 
 
 ## API
 
-Fixer Currency API was choosen as an API for this test. It is free, but has a limit of 1000 usage in a month. All keys are already written in the code. There is file _debug_data.py_. There is dictonary with saved rates. It was maden for tests with porpuse not to exceed the limit. You can use it, if in file _convertor.py_ on line 43 change variable debug meaning. However, 1000 tries of uage should be enough.
+Fixer Currency API was choosen as an API for this test. It is free, but has a limit of 1000 usage in a month. All keys are already written in the code. There is file _debug_data.py_. There is dictonary with saved rates. It was maden for tests with porpuse not to exceed the limit. You can use it, if in file _convertor.py_ on line 43 change variable debug meaning. However, 1000 tries of uage should be enough. You should not worry about that
 
 Link for API: https://rapidapi.com/fixer/api/fixer-currency
