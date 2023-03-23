@@ -1,0 +1,109 @@
+/* Store this code in 'style.css' file inside the 'static' folder*/
+
+.header{
+    padding: 5px 50px;
+    width: 300px;
+    height: 70px;
+    background-color: #236B8E;
+}
+
+.border{
+    padding: 50px 50px;
+    width: 900px;
+    height: 500px;
+    border: 1px solid #236B8E;
+    border-radius: 0px;
+    background-color: #81b2c3;
+}
+
+.border_show{
+    padding: 50px 50px;
+    width: 1000px;
+    height: 750px;
+    border: 1px solid #236B8E;
+    border-radius: 0px;
+    background-color: #9AC0CD;
+}
+
+.btn {
+    padding: 10px 40px;
+    background-color: #236B8E;
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.textbox{
+    padding: 10px 40px;
+    background-color: #236B8E;
+    color: #FFFFFF;
+    border-radius: 10px;
+}
+    
+::placeholder {
+    color: #FFFFFF;
+    opacity: 1;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+.word_top{
+    color: #FFFFFF;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+.word{
+    color: #000000;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.word_msg{
+    color: #ffffff;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+.word_bottom{
+    color: #000000;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.my-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #000000;
+    font-size: 0.875rem;
+    background-color: #9AC0CD;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  .my-table th,
+  .my-table td {
+    padding: 0.75rem;
+    font-size: 18px;
+    text-align: left;
+    vertical-align: top;
+    border: 2px solid #dee2e6;
+  }
+  
+  .my-table th {
+    font-weight: 600;
+    font-size: 18px;
+    background-color: #9AC0CD;
+    color: #000000;
+  }
+  
+  .my-table tbody tr:nth-of-type(odd) {
+    background-color: #7cb3c6;
+  }
+  

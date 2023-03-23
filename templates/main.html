@@ -1,0 +1,27 @@
+<!-- Store this code in 'login.html' file inside the 'templates' folder -->
+ 
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Main </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">          
+    </head>
+    <body></br></br></br></br>
+        <div align="center">
+          <div align="center" class="border">
+             <div class="header">
+                <h1 class="word_top">Currency conversion</h1>
+             </div>
+            <h2 class="word">
+                <form action="{{ url_for('main') }}" method="post">
+                  <div class="word_msg">{{ message }}</div></br>
+                    <p>Available currencies: USD, EUR, GBP, JPY, CAD, AUD, CHF, HKD, CNY, SGD</p>
+                    <p class="word">Amount:  <input id="amount" name="amount" type="float-input" placeholder="Enter number of money" class="textbox"/></p>
+                    <p class="word">From currency:  <input id="first_currency" name="first_currency" type="text" placeholder="Enter first currency" class="textbox"/></p>
+                    <p class="word">To currency:  <input id="second_currency" name="second_currency" type="text" placeholder="Enter second currency" class="textbox"/></p></br>
+                    <input type="submit" class="btn" value="Convert"></br></br></br>
+                </form>
+          </div>
+        </div>
+    </body>
+</html>

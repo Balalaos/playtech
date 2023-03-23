@@ -1,0 +1,42 @@
+<!-- Store this code in 'index.html' file inside the 'templates' folder-->
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> Index </title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">					
+	</head>
+	<body></br></br></br></br>
+		<div align="center">
+		<div align="center" class="border_show">
+			<div class="header">
+				<h1 class="word_top">Results</h1>
+			</div></br>
+				<p class="word">Conversion {{session.amount}} {{session.From_currency}} to {{session.To_currency}}:</p>
+				<h1>
+					<table class="my-table">
+						<tr>
+							<th>Intermediary currency</th>
+							<th>Changing to intermediary currency</th>
+							<th>Changing to desired currency</th>
+							<th>Profit!!!</th>
+						</tr>
+						
+						{% for item in session.from_intermediaries_rates%}
+						<tr>
+							<td>{{item}}</td>
+							<td>{{session.to_intermediaries_rates[item]}}</td>
+							<td>{{session.from_intermediaries_rates[item]}}</td>
+							<td>{{session.profit[item]}}</td>
+						</tr>
+						{% endfor %}
+						
+					</table>
+					<p class="word_bottom">Best for costumer: {{session.maximus["max_money_key"]}} intermediary currency, he will get {{session.maximus["max_money"]}}</p>
+					<p class="word_bottom">Best for service provider: {{session.maximus["max_profit_key"]}} intermediary currency, we will get {{session.maximus["max_profit"]}}</p>
+				</h1>
+				<a href="{{ url_for('show_loans') }}" class="btn">Back</a>
+		</div>
+		</div>
+	</body>
+</html>
