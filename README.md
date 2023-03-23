@@ -1,18 +1,17 @@
-# playtech
-Installing the application
-
-The app.exe file is implemented to use the program. It is located in the head folder. You don't need to install anything to use it. However, in the folder where the main.exe file is located, there must be three folders "database", "static" and "templates". The original database is located in the "database" folder called example.db. CSS files are located in the "static" folder. HTML files for web service are located in the "templates" folder.
+# PLAYTECH
 
 
-Using the application
 
-For using app you should run app.exe and go to link http://127.0.0.1:5000 in your browser. 
+## Using the application
 
-Main page
+There is 2 programs. One of them (exchanger_app.py) has GUI interface and located in folder exchanger, another (exchager_ide.py) does not have GUI and is in folder exchager_ide. The one with 
 
-When the application is launched, the user sees the home pages. Here is an opportunity to find an existing loan or add a new one. To find it, you need to enter the ID number. It should have 7 numbers. If the entered number is not found, the application will show an error message.
+## App
 
-Show loans page
+For using application you should run exchanger_app.py from 'exchanger' folder and go to link http://127.0.0.1:5000 in your browser. When programs starts, it downloads needed currency rates from API and saves them, so before finishing of code execution there is no need to download rates second time. User can enter amount and currency in the special textboxes. After that he will see error message or list with all currencies in table. CSS files are located in the "static" folder. HTML files for web service are located in the "templates" folder.
 
-If the word is found, the application shows the information of the borrower, all loaned money and all loans by list with dates. Register and database are made this way so 2 same IDs can not be added to database. It shows if user is blacklisted
+
+## IDE program
+
+File exchager_ide.py does not have graphical interface
 
