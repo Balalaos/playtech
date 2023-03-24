@@ -11,7 +11,7 @@ There is 2 programs. One of them (_exchanger_app.py_) has GUI interface, another
 
 ## App
 
-For using application you should run _exchanger_app.py_ and go to link http://127.0.0.1:5000 in your browser. When programs starts, it downloads needed currency rates from API and saves them, so before finishing of code execution there is no need to download rates second time. User can enter amount and currency in the special textboxes. After that he will see error message or list with all currencies in table. CSS files are located in the "_static_" folder. HTML files for web service are located in the "_templates_" folder.
+For using application you should run _exchanger_app.py_ and go to link http://127.0.0.1:5000 in your browser. When programs starts, it downloads needed currency rates from API and saves them, so before finishing of code execution there is no need to download rates second time. Downloading takes several second depending on your internet connection. User can enter amount and currency in the special textboxes. After that he will see error message or list with all currencies in table. CSS files are located in the "_static_" folder. HTML files for web service are located in the "_templates_" folder.
 
 
 ## IDE program
