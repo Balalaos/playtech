@@ -104,11 +104,12 @@ class Currency_Convertor():
             num = round(num, 4)
             from_intermediaries[currency] = num
             to_intermediaries[currency] = round(to_intermediaries[currency], 4)
-            
+
             # counting fractions of cents
             rounded_num = math.floor(num * 100)/100.0
             decimal_num =  round(num - rounded_num, 4)
             profit[currency] = decimal_num
+            
             # searching the best options for service
             if decimal_num > max_profit:
                 max_profit = decimal_num

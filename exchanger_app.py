@@ -12,14 +12,14 @@ app.secret_key = 'app'
 def main():
     message = ''
     if request.method == 'POST' and 'first_currency' in request.form and 'second_currency' in request.form and 'amount' in request.form:
-        From_currency = request.form['first_currency']
-        To_currency = request.form['second_currency']
+        from_currency = request.form['first_currency']
+        to_currency = request.form['second_currency']
         amount = request.form['amount']
         
         # Check if currencies entered correctly
-        if From_currency not in currencies or To_currency not in currencies:
+        if from_currency not in currencies or to_currency not in currencies:
             return render_template('main.html', message  = "Wrong currencies")
-        if From_currency == To_currency:
+        if from_currency == to_currency:
             return render_template('main.html', message  = "Please use different currencies")
         
         # Check if amount entered correctly
@@ -27,16 +27,18 @@ def main():
             amount = float(amount)
         except ValueError:
             return render_template('main.html', message  = "Please use numbers for amount")
+        if amount > 10000000000:
+            return render_template('main.html', message  = "Number is too big! Maximum is 10000000000")
 
         # Convert all currencies and find profit for company
-        from_intermediaries_rates, to_intermediaries_rates, maximus, profit = convertor.convert_currency(amount, From_currency, To_currency)
+        from_intermediaries_rates, to_intermediaries_rates, maximus, profit = convertor.convert_currency(amount, from_currency, to_currency)
         # Prepare data for showing on the screen
         session["from_intermediaries_rates"] = from_intermediaries_rates
         session["to_intermediaries_rates"] = to_intermediaries_rates
         session["maximus"] = maximus
         session["profit"] = profit
-        session["From_currency"] = From_currency
-        session["To_currency"] = To_currency
+        session["From_currency"] = from_currency
+        session["To_currency"] = to_currency
         session["amount"] = amount
         return render_template('show_loans.html', message = message )
     return render_template('main.html', message  = message )

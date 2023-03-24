@@ -3,9 +3,9 @@ from convetor import Currency_Convertor
 
 # This function printing all data for user
 # This function is used only in version without GUI
-def print_table(from_intermediaries, to_intermediaries, maximus, profit, From_currency, To_currency, amount):
+def print_table(from_intermediaries, to_intermediaries, maximus, profit, from_currency, to_currency, amount):
         print()
-        print(f"Conversion " + str(amount) + " " + From_currency + " to " + To_currency + ":")
+        print(f"Conversion " + str(amount) + " " + from_currency + " to " + to_currency + ":")
         print("{:<10} {:<20} {:<25} {:<20}".format("Currency", "to intermediary","from intermediary", "Profit"))
         for currency, rate in from_intermediaries.items():
             print("{:<10} {:<20} {:<25} {:<20}".format(currency, round(to_intermediaries[currency],4), rate, profit[currency]))
@@ -33,15 +33,15 @@ if __name__ == '__main__':
         
         # Check if currencies entered correctly
         try:
-            From_currency, To_currency = answer.split()
+            from_currency, to_currency = answer.split()
         except ValueError:
-            print("\nWrite currencies with space")
+            print("\nWrite currencies with space!!!")
             continue
-        if From_currency not in currencies or To_currency not in currencies:
-            print("\nWrong currencies")
+        if from_currency not in currencies or to_currency not in currencies:
+            print("\nWrong currencies!!!")
             continue
-        if From_currency == To_currency:
-            print("\nPlease use different currencies")
+        if from_currency == to_currency:
+            print("\nPlease use different currencies!!!")
             continue
         
         # Check if amount entered correctly
@@ -49,9 +49,12 @@ if __name__ == '__main__':
             amount = input("What amount you want to change?  ")
             amount = float(amount)
         except ValueError:
-            print("\nPlease use numbers for amount")
+            print("\nPlease use numbers for amount!!!")
+            continue
+        if amount > 10000000000:
+            print("\nNumber is too big!!! Maximum is 10000000000")
             continue
         
         #Convert currencies and print result
-        from_intermediaries, to_intermediaries, maximus, profit = convertor.convert_currency(amount, From_currency, To_currency)
-        print_table(from_intermediaries, to_intermediaries, maximus, profit, From_currency, To_currency, amount)
+        from_intermediaries, to_intermediaries, maximus, profit = convertor.convert_currency(amount, from_currency, to_currency)
+        print_table(from_intermediaries, to_intermediaries, maximus, profit, from_currency, to_currency, amount)
